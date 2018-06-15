@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="all" />
+    <meta name="copyright" content="MONOGRID" />
+    <meta name="contact" content="feedback@mono-grid.com" />
+    <meta name="keywords" content="GPU, rating, hash, GPU rating" />
+    <meta name="description" content="Simple website to check used GPU rating index for WebGL performance.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>WebGL Report Website</title>
+
+    <style type="text/css">
+      html, body {
+        height: 100%;
+        width: 100%;
+
+        padding: 0;
+        margin: 0;
+      }
+
+      div {
+        white-space: nowrap;
+        display: block;
+      }
+
+      div span {
+        text-transform: uppercase;
+        font-family: monospace;
+        display: inline-block;
+
+        margin: 25px 10px;
+        color: #000000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <span>Your GPU Hash:</span>
+      <span id="hash"></span>      
+    </div>
+
+    <div>
+      <span>Your GPU Rating:</span>
+      <span id="rating"></span>
+    </div>
+
+    <script type="text/javascript" src="./WebGLReport.js"></script>
+    <script type="text/javascript">
+      new WebGLReport(
+        document.getElementById('hash'),
+        document.getElementById('rating')
+      );
+    </script>
+  </body>
+</html>
